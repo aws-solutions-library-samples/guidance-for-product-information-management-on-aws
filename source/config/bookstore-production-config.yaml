@@ -1,0 +1,151 @@
+# --- PIM CUSTOMIZATION CONFIGURATION FILE: BOOKSTORE ---
+# This file defines the specific attributes and categories required to extend the base PIM model
+# for a book retail business.
+
+# -----------------------------------------------------------------------------
+# 1. CATEGORY DEFINITIONS
+# These categories must be inserted into the 'Category' table.
+# ParentCategoryID references the ID of the parent category defined in this list or an existing ID (e.g., 'ROOT').
+# -----------------------------------------------------------------------------
+categories:
+  - category_id: 'cat_book_root'
+    name: 'Books'
+    parent_category_id: null # Top-level
+    level: 1
+  - category_id: 'cat_fiction'
+    name: 'Fiction'
+    parent_category_id: 'cat_book_root'
+    level: 2
+  - category_id: 'cat_nonfiction'
+    name: 'Non-Fiction'
+    parent_category_id: 'cat_book_root'
+    level: 2
+  - category_id: 'cat_scifi'
+    name: 'Science Fiction'
+    parent_category_id: 'cat_fiction'
+    level: 3
+  - category_id: 'cat_biography'
+    name: 'Biography & Memoir'
+    parent_category_id: 'cat_nonfiction'
+    level: 3
+  - category_id: 'cat_kids'
+    name: 'Children & Young Adult'
+    parent_category_id: 'cat_book_root'
+    level: 2
+
+# -----------------------------------------------------------------------------
+# 2. ATTRIBUTE DEFINITIONS
+# attribute_id: Numeric ID (primary key)
+# code: Human-readable code for API/frontend use (e.g., 'author', 'publisher')
+# name: Display name
+# data_type: string, int, decimal, date, boolean
+# is_required: true/false
+# is_searchable: true/false (used in quick search)
+# scope: Category-Specific or Global (for documentation, not stored in DB)
+# -----------------------------------------------------------------------------
+attributes:
+  # BOOK IDENTIFICATION & METADATA
+  - attribute_id: 1
+    name: 'Author'
+    code: 'author'
+    data_type: 'string'
+    scope: 'Category-Specific'
+    is_required: true
+    is_searchable: true
+  - attribute_id: 2
+    name: 'Synopsis'
+    code: 'synopsis'
+    data_type: 'string'
+    scope: 'Global'
+    is_required: false
+    is_searchable: true
+  - attribute_id: 3
+    name: 'ISBN-13'
+    code: 'isbn13'
+    data_type: 'string'
+    scope: 'Global'
+    is_required: true
+    is_searchable: true
+  - attribute_id: 4
+    name: 'Publisher'
+    code: 'publisher'
+    data_type: 'string'
+    scope: 'Category-Specific'
+    is_required: true
+    is_searchable: true
+  - attribute_id: 5
+    name: 'Publication Date'
+    code: 'publication_date'
+    data_type: 'date'
+    scope: 'Global'
+    is_required: true
+    is_searchable: false
+
+  # PHYSICAL FORMAT ATTRIBUTES
+  - attribute_id: 6
+    name: 'Page Count'
+    code: 'page_count'
+    data_type: 'int'
+    scope: 'Category-Specific'
+    is_required: true
+    is_searchable: false
+  - attribute_id: 7
+    name: 'Binding Type'
+    code: 'binding'
+    data_type: 'string'
+    scope: 'Category-Specific'
+    is_required: true
+    is_searchable: false
+  - attribute_id: 8
+    name: 'Original Language'
+    code: 'language'
+    data_type: 'string'
+    scope: 'Global'
+    is_required: true
+    is_searchable: false
+
+  # MARKETING & READING ATTRIBUTES
+  - attribute_id: 9
+    name: 'Reading Age/Level'
+    code: 'reading_level'
+    data_type: 'string'
+    scope: 'Category-Specific'
+    is_required: false
+    is_searchable: false
+  - attribute_id: 10
+    name: 'Series name'
+    code: 'series_name'
+    data_type: 'string'
+    scope: 'Category-Specific'
+    is_required: false
+    is_searchable: true
+  - attribute_id: 11
+    name: 'Series Number'
+    code: 'series_number'
+    data_type: 'int'
+    scope: 'Category-Specific'
+    is_required: false
+    is_searchable: false
+  
+  # NEW: ENRICHMENT ATTRIBUTES
+  - attribute_id: 12
+    name: 'Genre/Thematic Tags'
+    code: 'genre_tags'
+    data_type: 'string'
+    scope: 'Category-Specific'
+    is_required: false
+    is_searchable: true
+  - attribute_id: 13
+    name: 'Average Customer Rating'
+    code: 'avg_rating'
+    data_type: 'decimal'
+    scope: 'Global'
+    is_required: false
+    is_searchable: false
+  - attribute_id: 14
+    name: 'Total Review Count'
+    code: 'review_count'
+    data_type: 'int'
+    scope: 'Global'
+    is_required: false
+    is_searchable: false

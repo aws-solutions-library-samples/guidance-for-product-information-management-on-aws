@@ -1,0 +1,10 @@
+{
+  "REACT_APP_API_URL": "https://59a85yzdpl.execute-api.ap-southeast-2.amazonaws.com/development/",
+  "REACT_APP_USER_POOL_ID": "ap-southeast-2_gX2AxdB8f",
+  "REACT_APP_USER_POOL_CLIENT_ID": "djjnr9b4oh795e5e0e2ps3au6",
+  "REACT_APP_IDENTITY_POOL_ID": "ap-southeast-2:81315b65-06bd-4612-9909-072b22c75754",
+  "REACT_APP_REGION": "ap-southeast-2",
+  "REACT_APP_CLOUDFRONT_URL": "https://d3cpfrr4i5pxej.cloudfront.net",
+  "REACT_APP_ENVIRONMENT": "development",
+  "REACT_APP_ASSETS_BUCKET": "pim-development-assets"
+}

@@ -1,0 +1,394 @@
+{
+  "products": [
+    {
+      "upc_ean": "9780525559474",
+      "brand": "Doubleday",
+      "base_name": "The Seven Husbands of Evelyn Hugo",
+      "short_description": "A reclusive Hollywood icon finally tells her story to an unknown journalist.",
+      "long_description": "Aging and reclusive Hollywood movie icon Evelyn Hugo is finally ready to tell the truth about her glamorous and scandalous life. But when she chooses unknown magazine reporter Monique Grant for the job, no one is more astounded than Monique herself. Why her? Why now? Monique is not exactly on top of the world. Her husband has left her, and her career has stagnated. Regardless of why Evelyn has selected her to write her biography, Monique is determined to use this opportunity to jumpstart her career.",
+      "base_price": 26.99,
+      "currency_code": "USD",
+      "stock_quantity": 100,
+      "status": "Active",
+      "attributes": {
+        "author": "Taylor Jenkins Reid",
+        "isbn13": "9780525559474",
+        "publisher": "Doubleday",
+        "publication_date": "2017-06-13",
+        "page_count": 400,
+        "binding": "Hardcover",
+        "language": "English",
+        "reading_age": "18+",
+        "genre_tags": "Contemporary Fiction, Romance, LGBTQ+",
+        "avg_rating": 4.6,
+        "review_count": 15432
+      },
+      "categories": [
+        "cat_fiction"
+      ],
+      "primary_category": "cat_fiction",
+      "media_assets": [
+        {
+          "file_name": "evelyn-hugo-cover.jpg",
+          "type": "Image",
+          "usage_code": "HERO",
+          "alt_text": "The Seven Husbands of Evelyn Hugo book cover"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "upc_ean": "9780143127741",
+      "brand": "Penguin Books",
+      "base_name": "Educated",
+      "short_description": "A memoir about a woman who, kept out of school, leaves her survivalist family and goes on to earn a PhD from Cambridge.",
+      "long_description": "Tara Westover was seventeen the first time she set foot in a classroom. Born to survivalists in the mountains of Idaho, she prepared for the end of the world by stockpiling home-canned peaches and sleeping with her 'head-for-the-hills bag'. In the summer she stewed herbs for her mother, a midwife and healer, and in the winter she salvaged in her father's junkyard. Her father forbade hospitals, so Tara never saw a doctor or nurse. Gashes and concussions, even burns from explosions, were all treated at home with herbalism. The family was so isolated from mainstream society that there was no one to ensure the children received an education, and no one to intervene when one of Tara's older brothers became violent.",
+      "base_price": 17,
+      "currency_code": "USD",
+      "stock_quantity": 100,
+      "status": "Active",
+      "attributes": {
+        "author": "Tara Westover",
+        "isbn13": "9780143127741",
+        "publisher": "Penguin Books",
+        "publication_date": "2018-02-20",
+        "page_count": 334,
+        "binding": "Paperback",
+        "language": "English",
+        "reading_age": "16+",
+        "genre_tags": "Memoir, Biography, Education",
+        "avg_rating": 4.5,
+        "review_count": 12876
+      },
+      "categories": [
+        "cat_nonfiction",
+        "cat_biography"
+      ],
+      "primary_category": "cat_biography",
+      "media_assets": [
+        {
+          "file_name": "educated-cover.jpg",
+          "type": "Image",
+          "usage_code": "HERO",
+          "alt_text": "Educated memoir book cover"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "upc_ean": "9780385547345",
+      "brand": "Doubleday",
+      "base_name": "The Midnight Library",
+      "short_description": "Between life and death there is a library, and within that library, the shelves go on forever.",
+      "long_description": "Nora Seed finds herself faced with the possibility of changing her life for a new one, following a different career, undoing old breakups, realizing her dreams of becoming a glaciologist; she must search within herself as she travels through the Midnight Library to decide what is truly fulfilling in life, and what makes it worth living in the first place.",
+      "base_price": 25.95,
+      "currency_code": "USD",
+      "stock_quantity": 100,
+      "status": "Active",
+      "attributes": {
+        "author": "Matt Haig",
+        "isbn13": "9780385547345",
+        "publisher": "Doubleday",
+        "publication_date": "2020-08-13",
+        "page_count": 288,
+        "binding": "Hardcover",
+        "language": "English",
+        "reading_age": "14+",
+        "genre_tags": "Contemporary Fiction, Philosophy, Fantasy",
+        "avg_rating": 4.2,
+        "review_count": 9654
+      },
+      "categories": [
+        "cat_fiction"
+      ],
+      "primary_category": "cat_fiction",
+      "media_assets": [
+        {
+          "file_name": "midnight-library-cover.jpg",
+          "type": "Image",
+          "usage_code": "HERO",
+          "alt_text": "The Midnight Library book cover with cosmic design"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "upc_ean": "9780553418026",
+      "brand": "Bantam",
+      "base_name": "The Martian",
+      "short_description": "An astronaut becomes one of the first people to walk on Mars. Now, he's sure he'll be the first person to die there.",
+      "long_description": "Six days ago, astronaut Mark Watney became one of the first people to walk on Mars. Now, he's sure he'll be the first person to die there. After a dust storm nearly kills him and forces his crew to evacuate while thinking him dead, Mark finds himself stranded and completely alone with no way to even signal Earth that he's alive\u2014and even if he could get word out, his supplies would be gone long before a rescue could arrive. But Mark isn't ready to give up yet.",
+      "base_price": 16.99,
+      "currency_code": "USD",
+      "stock_quantity": 100,
+      "status": "Active",
+      "attributes": {
+        "author": "Andy Weir",
+        "isbn13": "9780553418026",
+        "publisher": "Bantam",
+        "publication_date": "2014-02-11",
+        "page_count": 369,
+        "binding": "Paperback",
+        "language": "English",
+        "reading_age": "16+",
+        "genre_tags": "Science Fiction, Space, Survival",
+        "avg_rating": 4.4,
+        "review_count": 11234
+      },
+      "categories": [
+        "cat_fiction",
+        "cat_scifi"
+      ],
+      "primary_category": "cat_scifi",
+      "media_assets": [
+        {
+          "file_name": "martian-cover.jpg",
+          "type": "Image",
+          "usage_code": "HERO",
+          "alt_text": "The Martian book cover with Mars landscape"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "upc_ean": "9780735219090",
+      "brand": "Viking",
+      "base_name": "Where the Crawdads Sing",
+      "short_description": "A mystery and coming-of-age story set in the marshes of North Carolina.",
+      "long_description": "For years, rumors of the 'Marsh Girl' have haunted Barkley Cove, a quiet town on the North Carolina coast. So in late 1969, when handsome Chase Andrews is found dead, the locals immediately suspect Kya Clark, the so-called Marsh Girl. But Kya is not what they say. Sensitive and intelligent, she has survived for years alone in the marsh that she calls home, finding friends in the gulls and lessons in the sand.",
+      "base_price": 28.99,
+      "currency_code": "USD",
+      "stock_quantity": 100,
+      "status": "Active",
+      "attributes": {
+        "author": "Delia Owens",
+        "isbn13": "9780735219090",
+        "publisher": "Viking",
+        "publication_date": "2018-08-14",
+        "page_count": 384,
+        "binding": "Hardcover",
+        "language": "English",
+        "reading_age": "16+",
+        "genre_tags": "Mystery, Coming of Age, Nature",
+        "avg_rating": 4.3,
+        "review_count": 18765
+      },
+      "categories": [
+        "cat_fiction"
+      ],
+      "primary_category": "cat_fiction",
+      "media_assets": [
+        {
+          "file_name": "crawdads-cover.jpg",
+          "type": "Image",
+          "usage_code": "HERO",
+          "alt_text": "Where the Crawdads Sing book cover with marsh scene"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "upc_ean": "9780439708180",
+      "brand": "Scholastic",
+      "base_name": "Harry Potter and the Sorcerer's Stone",
+      "short_description": "The first book in the beloved Harry Potter series about a young wizard's adventures.",
+      "long_description": "Harry Potter has no idea how famous he is. That's because he's being raised by his miserable aunt and uncle who are terrified Harry will learn that he's a wizard, just as his parents were. But everything changes when Harry is summoned to attend an infamous school for wizards, and he finds himself caught up in a mystery more exciting, more dangerous, and more magical than he ever imagined.",
+      "base_price": 8.99,
+      "currency_code": "USD",
+      "stock_quantity": 100,
+      "status": "Active",
+      "attributes": {
+        "author": "J.K. Rowling",
+        "isbn13": "9780439708180",
+        "publisher": "Scholastic",
+        "publication_date": "1997-06-26",
+        "page_count": 309,
+        "binding": "Paperback",
+        "language": "English",
+        "reading_age": "8+",
+        "series_name": "Harry Potter",
+        "series_number": 1,
+        "genre_tags": "Fantasy, Young Adult, Magic",
+        "avg_rating": 4.7,
+        "review_count": 25432
+      },
+      "categories": [
+        "cat_fiction",
+        "cat_kids"
+      ],
+      "primary_category": "cat_kids",
+      "media_assets": [
+        {
+          "file_name": "harry-potter-1-cover.jpg",
+          "type": "Image",
+          "usage_code": "HERO",
+          "alt_text": "Harry Potter and the Sorcerer's Stone book cover"
+        }
+      ],
+      "relationships": [
+        {
+          "target_sku": "BOOK-017-PB",
+          "relationship_type": "SERIES_NEXT",
+          "sort_order": 1
+        }
+      ]
+    },
+    {
+      "upc_ean": "9780439064873",
+      "brand": "Scholastic",
+      "base_name": "Harry Potter and the Chamber of Secrets",
+      "short_description": "The second book in the Harry Potter series, where Harry returns to Hogwarts.",
+      "long_description": "The Dursleys were so mean and hideous that summer that all Harry Potter wanted was to get back to the Hogwarts School for Witchcraft and Wizardry. But just as he's packing his bags, Harry receives a warning from a strange, impish creature named Dobby who says that if Harry Potter returns to Hogwarts, disaster will strike.",
+      "base_price": 8.99,
+      "currency_code": "USD",
+      "stock_quantity": 100,
+      "status": "Active",
+      "attributes": {
+        "author": "J.K. Rowling",
+        "isbn13": "9780439064873",
+        "publisher": "Scholastic",
+        "publication_date": "1998-07-02",
+        "page_count": 341,
+        "binding": "Paperback",
+        "language": "English",
+        "reading_age": "8+",
+        "series_name": "Harry Potter",
+        "series_number": 2,
+        "genre_tags": "Fantasy, Young Adult, Magic",
+        "avg_rating": 4.6,
+        "review_count": 22187
+      },
+      "categories": [
+        "cat_fiction",
+        "cat_kids"
+      ],
+      "primary_category": "cat_kids",
+      "media_assets": [
+        {
+          "file_name": "harry-potter-2-cover.jpg",
+          "type": "Image",
+          "usage_code": "HERO",
+          "alt_text": "Harry Potter and the Chamber of Secrets book cover"
+        }
+      ],
+      "relationships": [
+        {
+          "target_sku": "BOOK-016-PB",
+          "relationship_type": "SERIES_PREV",
+          "sort_order": 1
+        }
+      ]
+    },
+    {
+      "upc_ean": "9780593229408",
+      "brand": "Crown",
+      "base_name": "Atomic Habits",
+      "short_description": "An Easy & Proven Way to Build Good Habits & Break Bad Ones",
+      "long_description": "No matter your goals, Atomic Habits offers a proven framework for improving--every day. James Clear, one of the world's leading experts on habit formation, reveals practical strategies that will teach you exactly how to form good habits, break bad ones, and master the tiny behaviors that lead to remarkable results.",
+      "base_price": 27,
+      "currency_code": "USD",
+      "stock_quantity": 100,
+      "status": "Active",
+      "attributes": {
+        "author": "James Clear",
+        "isbn13": "9780593229408",
+        "publisher": "Crown",
+        "publication_date": "2018-10-16",
+        "page_count": 320,
+        "binding": "Hardcover",
+        "language": "English",
+        "reading_age": "16+",
+        "genre_tags": "Self-Help, Psychology, Productivity",
+        "avg_rating": 4.4,
+        "review_count": 14567
+      },
+      "categories": [
+        "cat_nonfiction"
+      ],
+      "primary_category": "cat_nonfiction",
+      "media_assets": [
+        {
+          "file_name": "atomic-habits-cover.jpg",
+          "type": "Image",
+          "usage_code": "HERO",
+          "alt_text": "Atomic Habits book cover with minimalist design"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "upc_ean": "9780316769488",
+      "brand": "Little, Brown Books for Young Readers",
+      "base_name": "Wonder",
+      "short_description": "A story about a boy with facial differences who enters fifth grade, attending a mainstream elementary school for the first time.",
+      "long_description": "August Pullman was born with a facial difference that, up until now, has prevented him from going to a mainstream school. Starting 5th grade at Beecher Prep, he wants nothing more than to be treated as an ordinary kid\u2014but his new classmates can't get past Auggie's extraordinary face. Wonder, begins from Auggie's point of view, but soon switches to include his classmates, his sister, her boyfriend, and others.",
+      "base_price": 9.99,
+      "currency_code": "USD",
+      "stock_quantity": 100,
+      "status": "Active",
+      "attributes": {
+        "author": "R.J. Palacio",
+        "isbn13": "9780316769488",
+        "publisher": "Little, Brown Books for Young Readers",
+        "publication_date": "2012-02-14",
+        "page_count": 315,
+        "binding": "Paperback",
+        "language": "English",
+        "reading_age": "8+",
+        "genre_tags": "Middle Grade, Friendship, Acceptance",
+        "avg_rating": 4.5,
+        "review_count": 16789
+      },
+      "categories": [
+        "cat_kids"
+      ],
+      "primary_category": "cat_kids",
+      "media_assets": [
+        {
+          "file_name": "wonder-cover.jpg",
+          "type": "Image",
+          "usage_code": "HERO",
+          "alt_text": "Wonder book cover with inspiring message"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "upc_ean": "9780525520344",
+      "brand": "Knopf",
+      "base_name": "Circe",
+      "short_description": "A stunning novel of the Greek goddess who transforms from a nymph into a formidable witch.",
+      "long_description": "In the house of Helios, god of the sun and mightiest of the Titans, a daughter is born. But Circe is a strange child\u2014not powerful, like her father, nor viciously alluring like her mother. Turning to the world of mortals for companionship, she discovers that she does possess power\u2014the power of witchcraft, which can transform rivals into monsters and menace the gods themselves.",
+      "base_price": 26.95,
+      "currency_code": "USD",
+      "stock_quantity": 100,
+      "status": "Active",
+      "attributes": {
+        "author": "Madeline Miller",
+        "isbn13": "9780525520344",
+        "publisher": "Knopf",
+        "publication_date": "2018-04-10",
+        "page_count": 393,
+        "binding": "Hardcover",
+        "language": "English",
+        "reading_age": "16+",
+        "genre_tags": "Mythology, Fantasy, Historical Fiction",
+        "avg_rating": 4.3,
+        "review_count": 13245
+      },
+      "categories": [
+        "cat_fiction"
+      ],
+      "primary_category": "cat_fiction",
+      "media_assets": [
+        {
+          "file_name": "circe-cover.jpg",
+          "type": "Image",
+          "usage_code": "HERO",
+          "alt_text": "Circe book cover with mythological artwork"
+        }
+      ],
+      "relationships": []
+    }
+  ]
+}
