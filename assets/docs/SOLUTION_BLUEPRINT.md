@@ -314,9 +314,14 @@ Single CDK stack (`PimCoreStack`) deploys everything:
 - **OpenSearch integration** — Fuzzy search, faceted filtering, relevance ranking
 - **AI-powered data entry** — Upload supplier PDFs/spreadsheets, AI extracts product data (Amazon Bedrock)
 - **AI data quality suggestions** — Intelligent correction recommendations for failed records
+- **Natural language search** — Plain English queries converted to SQL automatically (Amazon Bedrock)
+- **Automated product categorization** — AI-driven classification with confidence scores
+- **Duplicate detection** — Semantic similarity matching using Amazon Titan Embeddings
 - **QuickSight dashboards** — Business intelligence and reporting
 - **EMR Serverless** — Complex analytics and ML on product data
 - **Multi-tenant support** — Shared infrastructure for multiple retailers
+
+For a detailed AI implementation roadmap including ROI analysis, phased rollout, and technology choices, refer to the internal AI Enhancement Strategy document.
 
 ---
 
@@ -363,7 +368,7 @@ Compare this to commercial PIM platforms: $500–$5,000+/month.
 
 ```bash
 export AWS_PROFILE=your-profile
-export AWS_REGION=ap-southeast-2
+export AWS_REGION=us-east-1
 
 pip install -r requirements.txt
 cdk bootstrap

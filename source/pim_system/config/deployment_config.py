@@ -12,6 +12,7 @@ class DeploymentConfig:
     """Configuration for CDK deployment"""
     environment: str
     region: str
+    project_prefix: str = "pim"
     enable_multi_az: bool = True
     lambda_memory_size: int = 512
     athena_workgroup_name: str = "pim_analytics_wg"
@@ -88,6 +89,7 @@ class DeploymentConfig:
         return cls(
             environment=config_data["environment"],
             region=region,
+            project_prefix=config_data.get("project_prefix", "pim"),
             enable_multi_az=config_data.get("enable_multi_az", True),
             lambda_memory_size=config_data.get("lambda_memory_size", 512),
             athena_workgroup_name=config_data.get("athena_workgroup_name", "pim_analytics_wg"),
@@ -107,21 +109,22 @@ class DeploymentConfig:
         )
     
     def get_resource_name(self, resource_type: str, account_id: str = None) -> str:
-        """Generate standardized resource names"""
+        """Generate standardized resource names using configurable prefix"""
+        prefix = self.project_prefix
         # For Cognito domains, use only lowercase letters and numbers with account ID for uniqueness
         if resource_type == "auth" and account_id:
-            return f"pim{resource_type}{account_id}"
+            return f"{prefix}{resource_type}{account_id}"
         elif resource_type == "auth":
-            return f"pim{resource_type}"
+            return f"{prefix}{resource_type}"
         # For Athena/Glue resources, use underscores
         elif resource_type in ["catalog"]:
-            return f"pim_{resource_type}"
+            return f"{prefix}_{resource_type}"
         # For S3 buckets, add account ID for global uniqueness
         elif resource_type in ["data-lake", "assets", "config", "quarantine", "athena-results"] and account_id:
-            return f"pim-{resource_type}-{account_id}"
+            return f"{prefix}-{resource_type}-{account_id}"
         # For other resources, use hyphens
         else:
-            return f"pim-{resource_type}"
+            return f"{prefix}-{resource_type}"
     
     def get_tags(self) -> Dict[str, str]:
         """Get standard tags for all resources"""

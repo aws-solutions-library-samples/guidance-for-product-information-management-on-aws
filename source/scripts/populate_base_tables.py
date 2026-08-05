@@ -192,7 +192,7 @@ def main():
     parser = argparse.ArgumentParser(description='Populate base PIM tables from YAML config')
     parser.add_argument('--config', required=True, help='Path to YAML configuration file')
     parser.add_argument('--stack-name', required=True, help='CloudFormation stack name')
-    parser.add_argument('--region', default='ap-southeast-2', help='AWS region')
+    parser.add_argument('--region', default='us-east-1', help='AWS region')
     parser.add_argument('--profile', help='AWS profile to use')
     
     args = parser.parse_args()

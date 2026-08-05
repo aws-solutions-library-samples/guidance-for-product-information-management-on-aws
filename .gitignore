@@ -160,6 +160,12 @@ local_config.yaml
 # ASH security scanner
 .ash/
 
+# Frontend environment config (contains deployment-specific values)
+source/frontend/amplify-env.json
+
+# Internal assets (not for public distribution)
+.internal_assets/
+
 
 
 

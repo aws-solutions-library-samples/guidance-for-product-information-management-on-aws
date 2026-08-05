@@ -683,7 +683,7 @@ def upload_custom_data(body_data: Dict) -> Dict[str, Any]:
         
     except Exception as e:
         print(f"❌ Error uploading custom data: {e}")
-        return create_response(500, {'error': f'Failed to upload custom data: {str(e)}'})
+        return create_response(500, {'error': 'Failed to upload custom data'})
 
 
 def _upload_to_s3(data: Dict) -> Dict[str, Any]:
@@ -713,7 +713,7 @@ def _upload_to_s3(data: Dict) -> Dict[str, Any]:
         
     except Exception as e:
         print(f"❌ Error uploading to S3: {e}")
-        return create_response(500, {'error': f'Failed to upload to S3: {str(e)}'})
+        return create_response(500, {'error': 'Failed to upload to S3'})
 
 
 def lambda_handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
@@ -1223,7 +1223,7 @@ def get_product(product_id: str) -> Dict[str, Any]:
         
     except Exception as e:
         print(f"Error getting product: {str(e)}")
-        return create_response(500, {'error': f'Failed to get product: {str(e)}'})
+        return create_response(500, {'error': 'Failed to get product'})
 
 
 def list_products(query_params: Dict) -> Dict[str, Any]:
@@ -1568,7 +1568,7 @@ def create_product(product_data: Dict) -> Dict[str, Any]:
         
     except Exception as e:
         print(f"Error creating product: {str(e)}")
-        return create_response(500, {'error': f'Failed to create product: {str(e)}'})
+        return create_response(500, {'error': 'Failed to create product'})
 
 
 def update_product(product_id: str, product_data: Dict) -> Dict[str, Any]:
@@ -2410,7 +2410,7 @@ def trigger_reprocessing(body: Dict) -> Dict[str, Any]:
         
         print(f"Step Functions execution started: {response['executionArn']}")
         
-        region = os.environ.get('AWS_DEFAULT_REGION', os.environ.get('AWS_REGION', 'ap-southeast-2'))
+        region = os.environ.get('AWS_DEFAULT_REGION', os.environ.get('AWS_REGION', 'us-east-1'))
         console_url = f"https://{region}.console.aws.amazon.com/states/home?region={region}#/executions/details/{response['executionArn']}"
         
         update_cache_version('products_list')

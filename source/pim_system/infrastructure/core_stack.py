@@ -783,7 +783,9 @@ class PimCoreStack(Stack):
                                 "glue:GetJobRun"
                             ],
                             resources=[
-                                f"arn:aws:glue:{self.region}:{self.account}:job/*"
+                                f"arn:aws:glue:{self.region}:{self.account}:job/{self.config.get_resource_name('product-etl')}",
+                                f"arn:aws:glue:{self.region}:{self.account}:job/{self.config.get_resource_name('managed-dq')}",
+                                f"arn:aws:glue:{self.region}:{self.account}:job/{self.config.get_resource_name('custom-dq')}"
                             ]
                         ),
                         # Step Functions permissions
@@ -1156,7 +1158,7 @@ class PimCoreStack(Stack):
             o_auth=cognito.OAuthSettings(
                 flows=cognito.OAuthFlows(
                     authorization_code_grant=True,
-                    implicit_code_grant=True
+                    implicit_code_grant=False
                 ),
                 scopes=[
                     cognito.OAuthScope.EMAIL,

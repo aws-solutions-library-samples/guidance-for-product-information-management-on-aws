@@ -40,22 +40,20 @@ The architecture works as follows:
 
 ### Cost
 
-_You are responsible for the cost of the AWS services used while running this Guidance. As of March 2026, the cost for running this Guidance with the default settings in the US East (N. Virginia) Region is approximately $178.00 per month for managing a mid-size catalog of approximately 50,000 products._
+_You are responsible for the cost of the AWS services used while running this Guidance. As of March 2026, the cost for running this Guidance with the default settings in the US East (N. Virginia) Region is approximately $188.00 per month for managing a mid-size catalog of approximately 50,000 products._
 
 The following table provides a sample cost breakdown for deploying this Guidance with the default parameters in the US East (N. Virginia) Region for one month.
 
 | AWS Service | Dimensions | Cost [USD] |
 | ----------- | ---------- | ---------- |
-| **Amazon S3** | 100 GB storage + 300 GB ingestion PUT requests | $5.00 |
-| **Amazon Athena** | 100 queries/day × 30 days × 10 GB/query | $150.00 |
-| **AWS Glue** | 2 jobs × 2 runs/day × 10 min × 2 DPU × 30 days | $18.00 |
-| **AWS Lambda** | 100K invocations × 500 ms × 512 MB | $1.00 |
-| **Amazon API Gateway** | 100K REST API calls per month | $1.00 |
-| **AWS Step Functions** | 60 executions/month | $1.00 |
-| **Amazon Cognito** | 50 MAU (first 50K free tier) | $0.00 |
-| **AWS Secrets Manager** | 1 secret + API calls | $1.00 |
-| **Amazon S3** (Athena results) | ~30 GB results cache | $1.00 |
-| **Total** | | **$178.00** |
+| **Amazon S3** | 100 GB storage + 300K PUT requests + 500K GET requests | $4.00 |
+| **Amazon Athena** | 100 queries/day × 30 days × 10 GB/query | $148.54 |
+| **AWS Glue** | 2 jobs × 2 runs/day × 10 min × 2 DPU × 30 days | $35.20 |
+| **AWS Lambda** | 100K invocations × 500 ms × 512 MB (free tier eligible) | $0.00 |
+| **Amazon API Gateway** | 100K REST API calls per month | $0.35 |
+| **AWS Step Functions** | 60 executions/month × 6 transitions (free tier eligible) | $0.00 |
+| **AWS Secrets Manager** | 1 secret + API calls | $0.40 |
+| **Total** | | **~$188.00** |
 
 **Cost optimization tips:**
 - **Athena result caching**: The API implements query result caching. Repeated queries reuse cached results instead of re-scanning, significantly reducing Athena costs.
@@ -64,6 +62,8 @@ The following table provides a sample cost breakdown for deploying this Guidance
 - **Reserved capacity**: For production, consider Athena provisioned capacity if running more than 200 queries per day.
 
 _We recommend creating a [Budget](https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-managing-costs.html) through [AWS Cost Explorer](https://aws.amazon.com/aws-cost-management/aws-cost-explorer/) to help manage costs. Prices are subject to change. For full details, refer to the pricing webpage for each AWS service used in this Guidance._
+
+For a detailed interactive cost breakdown, see the [AWS Pricing Calculator estimate](https://calculator.aws/#/estimate?id=86299af4e1be0daa8df0560f9ece91367d65750f).
 
 ## Prerequisites
 
@@ -384,7 +384,7 @@ After deploying this Guidance, consider the following customizations:
 - **Business intelligence**: Add **Amazon QuickSight** Enterprise for advanced analytics dashboards on product catalog metrics.
 - **Custom data quality rules**: Extend `source/glue_jobs/custom_data_quality_job.py` with business rules specific to your industry (e.g., regulatory compliance checks, cross-field validation).
 - **CI/CD pipeline**: Set up **AWS CodePipeline** with **AWS CodeBuild** to automate deployments using the `deployment/deploy.sh` script.
-- **Production hardening**: Review the [Blueprint Hardening Plan](assets/docs/BLUEPRINT_HARDENING_PLAN.md) for security and scalability recommendations.
+- **Production hardening**: Review the [Solution Blueprint](assets/docs/SOLUTION_BLUEPRINT.md) for architecture details, known gaps, and production readiness recommendations.
 
 ## Cleanup
 
@@ -436,6 +436,14 @@ aws secretsmanager delete-secret --secret-id pim-seed-user-credentials --force-d
 - This Guidance creates an **Amazon Cognito** user pool with seed user credentials stored in **AWS Secrets Manager**. Change the seed passwords after initial deployment for production use.
 - The **AWS Glue** jobs use 2 DPU minimum. For catalogs larger than 100,000 products, increase the DPU allocation in the CDK stack configuration.
 - The dataset included (`source/mock-data/test_data1.json`) is synthetic sample data for demonstration purposes.
+
+**Security Considerations:**
+
+The following items use permissive defaults to simplify initial deployment and local development. **You must restrict them before any production or internet-facing deployment:**
+
+- **CORS — API Gateway and Lambda responses:** The API Gateway is configured with `Cors.ALL_ORIGINS` and the Lambda response headers return `Access-Control-Allow-Origin: *`. For production, scope the allowed origin to your actual frontend domain (e.g., your Amplify or CloudFront URL) in both `source/pim_system/infrastructure/core_stack.py` (API Gateway CORS options) and the `create_response()` helper in each Lambda function.
+- **CORS — S3 Assets Bucket:** The assets S3 bucket allows `allowed_origins=["*"]` for GET/PUT/POST. For production, replace `"*"` with your frontend's domain in `source/pim_system/infrastructure/core_stack.py`.
+- **Resource naming:** All resources use a configurable `project_prefix` (default: `"pim"`). To deploy multiple instances in the same account and Region, set a unique `project_prefix` in `cdk.json` under `deployment_config`.
 
 **Limitations:**
 - The frontend development server (`npm start`) is intended for local development only. For production, deploy via **AWS Amplify** using the included `amplify.yml` build spec.

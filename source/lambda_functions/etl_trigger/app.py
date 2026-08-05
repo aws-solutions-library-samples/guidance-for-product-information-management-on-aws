@@ -73,7 +73,7 @@ def lambda_handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
             'execution_name': execution_name,
             'started_at': response['startDate'].isoformat(),
             'state_machine_arn': STATE_MACHINE_ARN,
-            'console_url': f"https://{os.environ.get('AWS_DEFAULT_REGION', 'ap-southeast-2')}.console.aws.amazon.com/states/home?region={os.environ.get('AWS_DEFAULT_REGION', 'ap-southeast-2')}#/executions/details/{response['executionArn']}"
+            'console_url': f"https://{os.environ.get('AWS_DEFAULT_REGION', 'us-east-1')}.console.aws.amazon.com/states/home?region={os.environ.get('AWS_DEFAULT_REGION', 'us-east-1')}#/executions/details/{response['executionArn']}"
         })
         
     except stepfunctions.exceptions.ExecutionAlreadyExists:
@@ -91,8 +91,7 @@ def lambda_handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
     except Exception as e:
         print(f"Error triggering ETL workflow: {str(e)}")
         return create_response(500, {
-            'error': 'Failed to trigger ETL workflow',
-            'details': str(e)
+            'error': 'Failed to trigger ETL workflow'
         })
 
 

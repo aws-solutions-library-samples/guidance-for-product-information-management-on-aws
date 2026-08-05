@@ -12,8 +12,8 @@ import os
 from typing import Dict, Optional
 
 # Configuration
-API_BASE_URL = os.environ.get("API_BASE_URL", "https://your-api-gateway-url.execute-api.ap-southeast-2.amazonaws.com/development")
-USER_POOL_ID = os.environ.get("USER_POOL_ID", "ap-southeast-2_XXXXXXXXX")
+API_BASE_URL = os.environ.get("API_BASE_URL", "https://your-api-gateway-url.execute-api.us-east-1.amazonaws.com/development")
+USER_POOL_ID = os.environ.get("USER_POOL_ID", "us-east-1_XXXXXXXXX")
 CLIENT_ID = os.environ.get("CLIENT_ID", "REPLACE_ME")
 USERNAME = os.environ.get("TEST_USERNAME", "testuser")
 PASSWORD = os.environ.get("TEST_PASSWORD", "REPLACE_ME")  # pragma: allowlist secret

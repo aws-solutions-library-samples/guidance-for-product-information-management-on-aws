@@ -62,6 +62,7 @@
     "development": {
       "environment": "development",
       "region": "us-east-1",
+      "project_prefix": "pim",
       "business_config_s3_key": "configs/bookstore-development-config.yaml",
       "enable_multi_az": false,
       "lambda_memory_size": 256,
@@ -70,6 +71,7 @@
     "production": {
       "environment": "production",
       "region": "us-east-1",
+      "project_prefix": "pim",
       "business_config_s3_key": "configs/bookstore-production-config.yaml",
       "enable_multi_az": true,
       "lambda_memory_size": 512,

@@ -128,7 +128,7 @@ BASE_TABLE_SCHEMAS = {
 }
 
 class IcebergTableManager:
-    def __init__(self, region='ap-southeast-2', profile=None, config_file=None):
+    def __init__(self, region='us-east-1', profile=None, config_file=None):
         session = boto3.Session(profile_name=profile) if profile else boto3.Session()
         self.athena = session.client('athena', region_name=region)
         self.glue = session.client('glue', region_name=region)
@@ -266,7 +266,7 @@ def main():
     parser.add_argument('--bucket', required=True, help='Data lake S3 bucket name')
     parser.add_argument('--config', help='Configuration YAML file (e.g., PIM-Customisation-BookStore.yml)')
     parser.add_argument('--profile', help='AWS profile name')
-    parser.add_argument('--region', default='ap-southeast-2', help='AWS region')
+    parser.add_argument('--region', default='us-east-1', help='AWS region')
     
     args = parser.parse_args()
     

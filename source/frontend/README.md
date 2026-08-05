@@ -42,7 +42,7 @@ A React-based frontend application for the AWS PIM (Product Information Manageme
    REACT_APP_USER_POOL_ID=your-user-pool-id
    REACT_APP_USER_POOL_CLIENT_ID=your-client-id
    REACT_APP_IDENTITY_POOL_ID=your-identity-pool-id
-   REACT_APP_REGION=ap-southeast-2
+   REACT_APP_REGION=us-east-1
    REACT_APP_CLOUDFRONT_URL=https://your-cloudfront-domain
    REACT_APP_ENVIRONMENT=development
    ```
@@ -107,8 +107,14 @@ src/
 
 The app uses AWS Cognito for authentication. CDK creates two demo users automatically:
 
-- **admin / Admin123!@#** — Editors group (read + write: create, update, delete products)
-- **viewer / Viewer123!@#** — Viewers group (read only: browse products, view dashboards)
+- **admin** — Editors group (read + write: create, update, delete products)
+- **viewer** — Viewers group (read only: browse products, view dashboards)
+
+Passwords are stored in AWS Secrets Manager under the secret name `pim-seed-user-credentials`. Retrieve them via the AWS Console or CLI:
+
+```bash
+aws secretsmanager get-secret-value --secret-id pim-seed-user-credentials --query SecretString --output text
+```
 
 ## API Integration
 

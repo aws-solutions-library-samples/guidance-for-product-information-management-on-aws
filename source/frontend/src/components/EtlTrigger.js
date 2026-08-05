@@ -63,8 +63,11 @@ const EtlTrigger = () => {
 
       // Get API endpoint from environment - use existing REACT_APP_API_URL
       const apiEndpoint = process.env.REACT_APP_API_URL?.replace(/\/$/, '') || 
-                         process.env.REACT_APP_API_ENDPOINT || 
-                         'https://3volc9bvi4.execute-api.ap-southeast-2.amazonaws.com/development';
+                         process.env.REACT_APP_API_ENDPOINT;
+
+      if (!apiEndpoint) {
+        throw new Error('API endpoint not configured. Set REACT_APP_API_URL or REACT_APP_API_ENDPOINT in your environment.');
+      }
 
       const url = `${apiEndpoint}/api/v1/etl/trigger`;
       
